@@ -1,0 +1,104 @@
+<div class="container-fluid" style="background-color: white;">
+  <!-- IMAGEN BANNER -->
+  <div class="row" id="rowImagen">
+    <div class="col-md-4" style="text-align: center">
+      <img
+        src="https://elpasajeconil.com/wp-content/uploads/2020/06/logotrans.png"
+        alt="Nombre del Restaurante"
+        class="ImgPasaje"
+      />
+    </div>
+  </div>
+
+  <!-- CONFIGURACIONES NOMBRES DE USUARIOS Y SALIR DE DEBAJO DE BANNER-->
+  <div class="row h-50" id="row1">
+    <div class="col">
+      <div class="LetrasBanner">
+        <a routerLink="/">INICIO</a>
+        <a routerLink="/configuracion">CONFIGURACIÓN</a>
+        <a routerLink="/carta"> CARTA</a>
+      </div> 
+    </div>
+  </div>
+
+  <!-- DIRECCIÓ N-->
+  <div class="row" id="direccion">
+    <span
+      >Avenida de la Playa, 6, 11149, Conil de la Frontera, Cádiz · Teléfono:
+      956 44 00 98 · Precio EUR / IVA incluido – Prices EUR / VAT included –
+      Preis EUR / Inkl. MwSt</span
+    >
+  </div>
+
+  <div class="row">
+    <div class="col-10">
+      <div class="row mt-3" *ngFor="let item of comidas; index as i">
+        <div class="col-6" style="text-align: center">
+          <img src="{{ item.img }}" style="border-radius: 5%" />
+        </div>
+
+        <div
+          class="col-6"
+          style="text-align: left; font-family: 'Times New Roman', Times, serif"
+        >
+          <div class="row" style="margin-top: 2%">
+            <h1>{{ item.titulo }}</h1>
+            <br />
+            <p>{{ item.descripcion }}</p>
+          </div>
+
+          <div class="row" style="margin-top: 2%">
+            <div class="col" style="text-align: center">
+              <button class="botonStyle" (click)="agregarAlCarrito(item)">
+                Añadir
+              </button>
+            </div>
+            <div class="col precio">{{ item.precio }} €</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-2">
+      <div
+        class="row"
+        style="
+          text-align: center;
+          font-family: 'Times New Roman', Times, serif;
+          margin-left: 2%;
+        "
+      >
+      <button
+            class="btn btn-outline-success"
+            type="submit"
+            style="
+              margin-top: 10%;
+              margin-bottom: 5%;
+              font-family: 'Times New Roman', Times, serif;
+              margin-right: 20px;
+              background-color: white;
+              color: black;
+              border: 2px solid #3a787e;
+            "
+          >
+            Carrito: {{ precioTotal }} €
+          </button>
+            <ul>
+              <p   style="
+              font-size: 14.5px;
+              font-family: 'Times New Roman', Times, serif;
+              text-align: left;
+            "*ngFor="let key of carrito | keyvalue">
+                {{ key.value.item.titulo }} - {{ key.value.item.precio }} € x{{ key.value.cantidad }}
+                <button (click)="quitarDelCarrito(key.key)"  style="border: none; background-color: white;" >
+                  <img 
+                  src="https://cdn-icons-png.flaticon.com/512/4379/4379934.png"
+                  class="botonX"
+                />           
+                  </button>
+                </p>
+            </ul>
+      </div>
+    </div>
+  </div>
+</div>

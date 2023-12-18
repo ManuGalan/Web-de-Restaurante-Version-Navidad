@@ -1,0 +1,72 @@
+<div class="container-fluid" style="background-color: white;">
+  <!-- IMAGEN BANNER -->
+  <div class="row" id="rowImagen">
+    <div class="col-md-4" style="text-align: center">
+      <img
+        src="https://elpasajeconil.com/wp-content/uploads/2020/06/logotrans.png"
+        alt="Nombre del Restaurante"
+        class="ImgPasaje"
+      />
+    </div>
+  </div>
+
+  <!-- CONFIGURACIONES NOMBRES DE USUARIOS Y SALIR DE DEBAJO DE BANNER-->
+  <div class="row h-50" id="row1">
+    <div class="col">
+      <div class="LetrasBanner">
+        <a routerLink="/">INICIO</a>
+        <a routerLink="/configuracion">CONFIGURACIÓN</a>
+        <a routerLink="/carta"> CARTA</a>
+      </div> 
+    </div>
+  </div>
+
+  <!-- DIRECCIÓ N-->
+  <div class="row" id="direccion">
+    <span
+      >Avenida de la Playa, 6, 11149, Conil de la Frontera, Cádiz · Teléfono:
+      956 44 00 98 · Precio EUR / IVA incluido – Prices EUR / VAT included –
+      Preis EUR / Inkl. MwSt</span
+    >
+    
+
+    <!-- APARTADO DE CONFIGURACIÓN -->
+<div class="row" id="configuracion">
+  <div class="col">
+    <div class="configContent">
+      <div class="perfilFotoCirculo" id="fotoCirculo"></div>
+      <h3 id="nombreUsuarioMostrado">{{ nombreUsuario }}</h3> 
+      <p id="direccionUsuario">{{ descripcionUsuario }}</p>
+
+      <div class="configItem">
+        <label for="nombreUsuarioInput">Cambiar nombre:</label>
+        <input type="text" id="nombreUsuarioInput" #nombreInput>
+        <button (click)="cambiarNombre(nombreInput.value)">Cambiar</button>
+      </div>
+
+      <div class="configItem">
+        <label for="descripcionUsuarioInput">Cambiar Dirección:</label>
+        <input type="text" id="descripcionUsuarioInput" #descripcionInput>
+        <button (click)="cambiarDescripcion(descripcionInput.value)">Cambiar</button>
+      </div>      
+
+      <div class="configItem">
+        <label for="fotoPerfil">Cambiar foto de perfil:</label>
+        <input type="file" id="fotoPerfil" name="fotoPerfil" (change)="cambiarFotoPerfil($event)">
+      </div>
+
+
+      <div class="configItem">
+        <label for="idioma">Idioma:</label>
+        <select id="idioma" name="idioma">
+          <option value="espanol">Español</option>
+          <option value="andaluh">Andaluh</option>
+          <!-- Andaluh es igual que español no cambia nada en la página porque el Andaluz es igual que el español ortograficamente -->
+        </select>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+</div>

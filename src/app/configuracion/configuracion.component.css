@@ -1,0 +1,151 @@
+#row1 {
+    background-color: #3a787e;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    height: 100vh;
+}
+
+#rowImagen {
+    background-color: white;
+    color: #3a787e;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.ImgPasaje {
+    width: 50%;
+    height: 90%;
+    margin-bottom: 2%;
+}
+
+#direccion {
+    font-family: 'Times New Roman', Times, serif;
+    text-align: center;
+    background-color: #ffffff;
+    color: #3a787e;
+    font-size: 12.5px;
+    padding: 10px;
+    margin-bottom: 5%;
+}
+
+@media (max-width: 768px) {
+    #direccion {
+        font-size: 10px;
+    }
+}
+
+.LetrasBanner {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.LetrasBanner a {
+    color: #ffffff;
+    text-decoration: none;
+    padding: 10px;
+    text-align: center;
+    flex: 0 0 auto;
+}
+
+@media (max-width: 576px) {
+    .LetrasBanner a {
+        flex-basis: 100%;
+    }
+}
+
+
+#nombreUsuarioMostrado {
+    color: #3a787e; 
+    font-family: 'Times New Roman', Times, serif; 
+    text-align: center; 
+    margin: 10px 0; 
+    font-size: 20px;
+    margin-bottom: 5%;
+}
+
+
+
+
+
+
+#configuracion {
+    font-family: 'Times New Roman', Times, serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 70vh; 
+}
+
+.configContent {
+    background-color: white;
+    color: #3a787e;
+    max-width: 500px;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: left;
+    box-shadow: 0 4px 8px 0 rgba(58, 120, 126, 0.5), 0 6px 20px 0 rgba(58, 120, 126, 0.3);
+    margin: auto;
+}
+
+.perfilFotoCirculo {
+    width: 100px;
+    height: 100px;
+    background-color: #cccccc;
+    border-radius: 50%;
+    margin: 0 auto 15px;
+}
+
+.configItem {
+    margin-bottom: 15px;
+}
+
+.configItem label {
+    margin-right: 10px;
+}
+
+.configItem input[type="text"],
+.configItem select,
+.configItem input[type="file"] {
+    padding: 5px;
+    border: 1px solid #3a787e;
+    border-radius: 5px;
+    background-color: white;
+    color: #3a787e;
+}
+
+.configItem input[type="checkbox"] {
+    transform: scale(1.2);
+}
+
+@media (max-width: 768px) {
+    .configContent {
+        width: 90%;
+    }
+
+    #configuracion {
+        min-height: auto;
+    }
+}
+
+
+.configItem button {
+    background-color: #3a787e; 
+    color: white; 
+    border: none; 
+    border-radius: 5px; 
+    padding: 5px 15px; 
+    margin-left: 10px; 
+    cursor: pointer; 
+    transition: background-color 0.3s; 
+}
+
+.configItem button:hover {
+    background-color: #2a5859; 
+}
+
+
+

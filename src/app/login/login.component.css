@@ -1,0 +1,130 @@
+.container-login {
+    width: 90%;
+    max-width: 450px;
+    height: auto;
+    background-color: #3a787e;
+    color: #fff;
+    top: 50%;
+    left: 50%;
+    font-family: 'Times New Roman', Times, serif;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    box-sizing: border-box;
+    padding: 40px 30px;
+    border-radius: 5%;
+}
+.container-login .avatar {
+    width: 210px;
+    height: 100px;
+    border-radius: 50%;
+    position: absolute;
+    top: -50px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #fff;
+    padding: 2%;
+}
+
+@media (max-width: 768px) {
+    .container-login .avatar {
+        width: 160px;
+        height: 75px;
+        transform: translateX(-50%);
+    }
+}
+
+@media (max-width: 576px) {
+    .container-login .avatar {
+        width: 130px; 
+        height: 60px;
+        transform: translateX(-50%);
+    }
+}
+
+
+.container-login h1 {
+    margin: 0;
+    padding: 20px 0;
+    text-align: center;
+    font-size: 22px;
+}
+
+.container-login label {
+    margin: 0;
+    padding: 0;
+    font-weight: bold;
+    font-size: 16px;
+    display: block;
+}
+
+.container-login input {
+    width: 100%;
+    margin-bottom: 20px;
+    color: white;
+    font-size: 16px;
+}
+
+.container-login input[type="text"],
+.container-login input[type="password"] {
+    border: none;
+    border-bottom: 1px solid white;
+    background: transparent;
+    outline: none;
+    height: 40px;
+    font-size: 16px;
+    color: white;
+}
+
+.container-login input[type="submit"] {
+    border: none;
+    outline: none;
+    height: 40px;
+    background: white;
+    color: #3a787e;
+    font-weight: bold;
+    font-size: 16px;
+    border-radius: 20px;
+}
+
+.container-login a {
+    text-decoration: none;
+    font-size: 14px;
+    color: #fff;
+    display: block;
+    text-align: center;
+    margin-top: 20px;
+}
+
+@media (max-width: 768px) {
+    .container-login {
+        padding: 30px 20px;
+    }
+
+    .container-login .avatar {
+        width: 80px;
+        height: 80px;
+        top: -40px;
+    }
+
+    .container-login h1 {
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 576px) {
+    .container-login .avatar {
+        width: 70px;
+        height: 70px;
+        top: -35px;
+    }
+
+    .container-login h1 {
+        font-size: 18px;
+    }
+
+    .container-login label,
+    .container-login input,
+    .container-login input[type="submit"] {
+        font-size: 14px;
+    }
+}
